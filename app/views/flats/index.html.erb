@@ -1,0 +1,10 @@
+<h2>Flats</h2>
+
+<% @flats.each do |flat| %>
+  <div class="card">
+  <%= link_to flat.name, flat_path(flat), class: "underline" %>
+  <%= link_to flat.address, flat_path(flat) %>
+  </div>
+<% end %>
+
+<%= link_to "Ajouter un logement",  new_flat_path %>
